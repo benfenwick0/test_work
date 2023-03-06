@@ -1,16 +1,28 @@
-# This is a sample Python script.
+from car import Car
+import pytest
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+car_1 = Car("Ford", 1500, "red", 30, 100, 50)
+car_2 = Car("BMW", 1650, "blue", 60, 140, 75)
 
+print(f"The first car's make is: {car_1.make}, the weight is {car_1.weight}g, the color of the car is {car_1.color},"
+      f" the current speed of the car is "
+      f"{car_1.currentSpeed}mph, the max speed is {car_1.maxSpeed}mph and the fuel level is {car_1.fuelLevel}%")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print(f"The first car's make is: {car_2.make}, the weight is {car_2.weight}g, the color of the car is {car_2.color},"
+      f" the current speed of the car is "
+      f"{car_2.currentSpeed}mph, the max speed is {car_2.maxSpeed}mph and the fuel level is {car_2.fuelLevel}%")
 
+car_1.accelerate()
+car_1.accelerate()
+car_1.accelerate()
+car_2.refuel()
+car_2.brake()
+car_2.brake()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print(f"The first car's make is: {car_1.make}, the weight is {car_1.weight}g, the color of the car is {car_1.color},"
+      f" the current speed of the car is "
+      f"{car_1.currentSpeed}mph, the max speed is {car_1.maxSpeed}mph and the fuel level is {car_1.fuelLevel}%")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(f"The first car's make is: {car_2.make}, the weight is {car_2.weight}g, the color of the car is {car_2.color},"
+      f" the current speed of the car is "
+      f"{car_2.currentSpeed}mph, the max speed is {car_2.maxSpeed}mph and the fuel level is {car_2.fuelLevel}%")
